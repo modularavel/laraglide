@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Casimirorocha\Laraglide\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaraglideCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laraglide';
 
     public $description = 'My command';
 

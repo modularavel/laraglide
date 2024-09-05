@@ -2,6 +2,7 @@
 
 namespace Workbench\App\Providers;
 
+use Casimirorocha\Laraglide\Laraglide;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
@@ -20,6 +21,6 @@ class WorkbenchServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Route::view('/', 'welcome');
+
     }
 }

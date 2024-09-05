@@ -16,6 +16,6 @@ Route::get('/secure-image/{path}', function ($path) {
 
     // Generate a URL
     return $urlBuilder->getUrl($path, [
-        'w' => 500
+        'w' => 500,
     ]);
 })->where('path', '.*')->name('secure.image');

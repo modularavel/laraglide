@@ -1,12 +1,11 @@
 <?php
 
-
 // config for Casimirorocha/Laraglide
 return [
 
     'base_url' => env('LARAGLIDE_BASE_URL', 'img'),
 
-    'max_image_size' => env('LARAGLIDE_MAX_IMAGE_SIZE', 1024*1024*2),
+    'max_image_size' => env('LARAGLIDE_MAX_IMAGE_SIZE', 1024 * 1024 * 2),
 
     /*
     |--------------------------------------------------------------------------
@@ -197,7 +196,7 @@ return [
         | Loading (lazy)
         |--------------------------------------------------------------------------
         */
-        'loading' => 'lazy'
+        'loading' => 'lazy',
     ],
 
     /*
@@ -253,6 +252,6 @@ return [
             'w' => 600,
             'h' => 400,
             'fit' => 'crop',
-        ]
-    ]
+        ],
+    ],
 ];

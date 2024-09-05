@@ -2,9 +2,9 @@
 
 namespace Casimirorocha\Laraglide\Tests;
 
+use Casimirorocha\Laraglide\LaraglideServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Casimirorocha\Laraglide\LaraglideServiceProvider;
 
 class TestCase extends Orchestra
 {

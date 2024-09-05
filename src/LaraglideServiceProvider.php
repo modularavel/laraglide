@@ -2,9 +2,9 @@
 
 namespace Casimirorocha\Laraglide;
 
+use Casimirorocha\Laraglide\Commands\LaraglideCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Casimirorocha\Laraglide\Commands\LaraglideCommand;
 
 class LaraglideServiceProvider extends PackageServiceProvider
 {

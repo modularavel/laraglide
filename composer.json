@@ -1,6 +1,7 @@
 {
     "name": "casimirorocha/laraglide",
     "description": "This is my package laraglide",
+    "version": "1.0.0",
     "keywords": [
         "casimirorocha",
         "laravel",

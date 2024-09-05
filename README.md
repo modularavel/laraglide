@@ -33,7 +33,7 @@ This is the contents of the published config file:
 
 ```php
 return [
-	'base_url' => env('LARAGLIDE_BASE_URL', 'img'),
+'base_url' => env('LARAGLIDE_BASE_URL', 'img'),
 
     'max_image_size' => env('LARAGLIDE_MAX_IMAGE_SIZE', 1024 * 1024 * 2),
 

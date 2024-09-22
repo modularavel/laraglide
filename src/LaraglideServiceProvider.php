@@ -24,9 +24,9 @@ class LaraglideServiceProvider extends PackageServiceProvider
             ->hasRoute('laraglide')
             ->hasViewComponents('laraglide')
             ->hasCommand(LaraglideCommand::class)
-            ->hasInstallCommand(function(InstallCommand $command) {
+            ->hasInstallCommand(function (InstallCommand $command) {
                 $command
-                    ->startWith(function(InstallCommand $command) {
+                    ->startWith(function (InstallCommand $command) {
                         $command->info('Hello, and welcome to my great new package!');
                     })
                     ->publishConfigFile()
@@ -34,7 +34,7 @@ class LaraglideServiceProvider extends PackageServiceProvider
                     ->publishMigrations()
                     ->copyAndRegisterServiceProviderInApp()
                     ->askToStarRepoOnGitHub('casimirorocha/laraglide')
-                    ->endWith(function(InstallCommand $command) {
+                    ->endWith(function (InstallCommand $command) {
                         $command->info('Have a great day!');
                     });
             });

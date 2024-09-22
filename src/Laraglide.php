@@ -6,7 +6,6 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Storage;
 use League\Glide\Responses\SymfonyResponseFactory;
 use League\Glide\ServerFactory;
-use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class Laraglide implements ShouldQueue
 {

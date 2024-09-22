@@ -27,7 +27,7 @@ return [
 
     'cache_path_prefix' => env('LARAGLIDE_CACHE_PATH_PREFIX', '.cache'),
 
-    'group_cache_in_folders' => env('LARAGLIDE_GROUP_CACHE_IN_FOLDERS', '.cache'),
+    'group_cache_in_folders' => env('LARAGLIDE_GROUP_CACHE_IN_FOLDERS', true),
 
     'watermarks_path' => public_path('watermarks/'),
 
@@ -117,7 +117,7 @@ return [
         */
         'borderType' => env('LARAGLIDE_IMG_BORDER_TYPE', 'expand'),
 
-        'quality' => env('LARAGLIDE_IMG_QUALITY', 90), // Integer: 0 - 100
+        'quality' => env('LARAGLIDE_IMG_QUALITY', 80), // Integer: 0 - 100
 
         /*
         |--------------------------------------------------------------------------

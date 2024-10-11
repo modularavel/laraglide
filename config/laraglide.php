@@ -3,9 +3,13 @@
 // config for Casimirorocha/Laraglide
 return [
 
+    'secure_key' => env('LARAGLIDE_SECURE_KEY', 'v-LK4WCdhcfcc%jt*VC2cj%nVpu+xQKvLUA%H86kRVk_4bgG8&CWM#k*b_7MUJpmTc=4GFmKFp7=K%67je-skxC5vz+r#xT?62tT?Aw%FtQ4Y3gvnwHTwqhxUh89wCa_'),
+
     'base_url' => env('LARAGLIDE_BASE_URL', 'img'),
 
-    'max_image_size' => env('LARAGLIDE_MAX_IMAGE_SIZE', 1024 * 1024 * 2),
+    'secure_base_url' => env('LARAGLIDE_SECURE_BASE_URL', 'secure-image'),
+
+    'max_image_size' => env('LARAGLIDE_MAX_IMAGE_SIZE', 1024 * 1024),
 
     /*
     |--------------------------------------------------------------------------

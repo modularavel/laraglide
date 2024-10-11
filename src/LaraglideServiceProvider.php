@@ -25,8 +25,7 @@ class LaraglideServiceProvider extends PackageServiceProvider
             ->hasViewComponents('laraglide')
             ->hasCommand(LaraglideCommand::class)
             ->hasInstallCommand(function(InstallCommand $command) {
-                $command
-                    ->startWith(function(InstallCommand $command) {
+                $command->startWith(function(InstallCommand $command) {
                         $command->info('Hello, and welcome to my great new package!');
                     })
                     ->publishConfigFile()

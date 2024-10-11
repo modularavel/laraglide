@@ -2,36 +2,38 @@
 
 namespace Casimirorocha\Laraglide;
 
-use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Support\Facades\Storage;
-use League\Glide\Responses\SymfonyResponseFactory;
+use Illuminate\Http\Request;
 use League\Glide\ServerFactory;
+use Illuminate\Support\Facades\Storage;
+use League\Glide\Signatures\SignatureException;
+use League\Glide\Signatures\SignatureFactory;
+use League\Glide\Responses\SymfonyResponseFactory;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 
-class Laraglide implements ShouldQueue
+class Laraglide
 {
-    public function __invoke($path)
+    public function __invoke(Request $request, string $path): StreamedResponse
     {
-        $app = app('request');
-
         $config = config('laraglide');
 
-        $cacheDriver = Storage::disk(config('laraglide.cache_driver'))->getDriver();
+        try {
+            // Validate HTTP signature
+            SignatureFactory::create($config['secure_key'])->validateRequest("/img/$path", $request->all());
 
-        $sourceDriver = Storage::disk(config('laraglide.source_driver'))->getDriver();
+            $server = ServerFactory::create([
+                'response' => new SymfonyResponseFactory($request),
+                'source' => Storage::disk($config['source_driver'])->getDriver(),
+                'cache' => Storage::disk($config['cache_driver'])->getDriver(),
+                'watermarks' => $config['watermarks_path'],
+                'cache_path_prefix' => $config['cache_path_prefix'],
+                'base_url' => $config['base_url'],
+                'max_image_size' => $config['max_image_size'],
+                'group_cache_in_folders' => $config['group_cache_in_folders'],
+            ]);
 
-        $server = ServerFactory::create([
-            'driver' => 'gd',
-            'response' => new SymfonyResponseFactory($app),
-            'source' => $sourceDriver,
-            'cache' => $cacheDriver,
-            'watermarks' => $config['watermarks_path'],
-            'cache_path_prefix' => $config['cache_path_prefix'],
-            'base_url' => $config['base_url'],
-            'max_image_size' => $config['max_image_size'],
-            'group_cache_in_folders' => $config['group_cache_in_folders'],
-        ]);
-
-        $server->outputImage($path, request()->except(['expires', 'signature']));
+            return $server->getImageResponse($path, $request->all());
+        } catch (SignatureException|FileNotFoundException $e) {
+            abort(403, $e->getMessage());
+        }
     }
 }

@@ -72,7 +72,8 @@
                 "Casimirorocha\\Laraglide\\LaraglideServiceProvider"
             ],
             "aliases": {
-                "Laraglide": "Casimirorocha\\Laraglide\\Facades\\Laraglide"
+                "Laraglide": "Casimirorocha\\Laraglide\\Facades\\Laraglide",
+                "LaraglideSecure": "Casimirorocha\\Laraglide\\Facades\\LaraglideSecure"
             }
         }
     },

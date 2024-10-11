@@ -24,10 +24,10 @@ class LaraglideServiceProvider extends PackageServiceProvider
             ->hasRoute('laraglide')
             ->hasViewComponents('laraglide')
             ->hasCommand(LaraglideCommand::class)
-            ->hasInstallCommand(function(InstallCommand $command) {
-                $command->startWith(function(InstallCommand $command) {
-                        $command->info('Hello, and welcome to my great new package!');
-                    })
+            ->hasInstallCommand(function (InstallCommand $command) {
+                $command->startWith(function (InstallCommand $command) {
+                    $command->info('Hello, and welcome to my great new package!');
+                })
                     ->publishConfigFile()
                     ->publishAssets()
                     ->publishMigrations()

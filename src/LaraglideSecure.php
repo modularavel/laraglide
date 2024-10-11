@@ -2,10 +2,8 @@
 
 namespace Casimirorocha\Laraglide;
 
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
 use League\Glide\Urls\UrlBuilderFactory;
-use Symfony\Component\HttpFoundation\Response as ResponseAlias;
 use URL;
 
 class LaraglideSecure
@@ -21,4 +19,3 @@ class LaraglideSecure
         return URL::to($urlBuilder->getUrl($path, $params));
     }
 }
-

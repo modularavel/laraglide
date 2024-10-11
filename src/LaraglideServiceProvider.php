@@ -33,7 +33,7 @@ class LaraglideServiceProvider extends PackageServiceProvider
                     ->publishMigrations()
                     ->copyAndRegisterServiceProviderInApp()
                     ->askToStarRepoOnGitHub('casimirorocha/laraglide')
-                    ->endWith(function(InstallCommand $command) {
+                    ->endWith(function (InstallCommand $command) {
                         $command->info('Have a great day!');
                     });
             });

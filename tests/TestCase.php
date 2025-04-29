@@ -1,8 +1,8 @@
 <?php
 
-namespace Casimirorocha\Laraglide\Tests;
+namespace Modularavel\Laraglide\Tests;
 
-use Casimirorocha\Laraglide\LaraglideServiceProvider;
+use Modularavel\Laraglide\LaraglideServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -13,7 +13,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'Casimirorocha\\Laraglide\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'Modularavel\\Laraglide\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 

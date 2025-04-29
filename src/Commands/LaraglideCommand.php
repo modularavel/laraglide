@@ -1,6 +1,6 @@
 <?php
 
-namespace Casimirorocha\Laraglide\Commands;
+namespace Modularavel\Laraglide\Commands;
 
 use Illuminate\Console\Command;
 

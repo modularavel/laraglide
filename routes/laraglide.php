@@ -1,6 +1,6 @@
 <?php
 
-use Casimirorocha\Laraglide\Laraglide;
+use Modularavel\Laraglide\Laraglide;
 use Illuminate\Support\Facades\Route;
 use League\Glide\Urls\UrlBuilderFactory;
 

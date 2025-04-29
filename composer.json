@@ -1,19 +1,18 @@
 {
-    "name": "casimirorocha/laraglide",
+    "name": "modularavel/laraglide",
     "description": "This is my package laraglide",
-    "version": "1.0.0",
+    "version": "v1.0.0",
     "keywords": [
-        "casimirorocha",
+        "modularavel",
         "laravel",
         "laraglide"
     ],
-    "homepage": "https://github.com/casimirorocha/laraglide",
+    "homepage": "https://github.com/modularavel/laraglide",
     "license": "MIT",
     "authors": [
         {
             "name": "Casimiro Rocha",
-            "email": "casimiroaf@gmail.com",
-            "role": "Developer"
+            "email": "contato@crsistemas.dev.br"
         }
     ],
     "require": {
@@ -31,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Casimirorocha\\Laraglide\\": "src/",
-            "Casimirorocha\\Laraglide\\Database\\Factories\\": "database/factories/"
+            "Modularavel\\Laraglide\\": "src/",
+            "Modularavel\\Laraglide\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Casimirorocha\\Laraglide\\Tests\\": "tests/",
+            "Modularavel\\Laraglide\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
@@ -69,11 +68,11 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Casimirorocha\\Laraglide\\LaraglideServiceProvider"
+                "Modularavel\\Laraglide\\LaraglideServiceProvider"
             ],
             "aliases": {
-                "Laraglide": "Casimirorocha\\Laraglide\\Facades\\Laraglide",
-                "LaraglideSecure": "Casimirorocha\\Laraglide\\Facades\\LaraglideSecure"
+                "Laraglide": "Modularavel\\Laraglide\\Facades\\Laraglide",
+                "LaraglideSecure": "Modularavel\\Laraglide\\Facades\\LaraglideSecure"
             }
         }
     },

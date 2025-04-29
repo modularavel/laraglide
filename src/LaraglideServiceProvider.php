@@ -1,8 +1,8 @@
 <?php
 
-namespace Casimirorocha\Laraglide;
+namespace Modularavel\Laraglide;
 
-use Casimirorocha\Laraglide\Commands\LaraglideCommand;
+use Modularavel\Laraglide\Commands\LaraglideCommand;
 use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -32,7 +32,7 @@ class LaraglideServiceProvider extends PackageServiceProvider
                     ->publishAssets()
                     ->publishMigrations()
                     ->copyAndRegisterServiceProviderInApp()
-                    ->askToStarRepoOnGitHub('casimirorocha/laraglide')
+                    ->askToStarRepoOnGitHub('modularavel/laraglide')
                     ->endWith(function (InstallCommand $command) {
                         $command->info('Have a great day!');
                     });

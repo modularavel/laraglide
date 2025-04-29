@@ -1,6 +1,6 @@
 <?php
 
-namespace Casimirorocha\Laraglide;
+namespace Modularavel\Laraglide;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;

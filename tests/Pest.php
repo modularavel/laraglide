@@ -1,5 +1,5 @@
 <?php
 
-use Casimirorocha\Laraglide\Tests\TestCase;
+use Modularavel\Laraglide\Tests\TestCase;
 
 uses(TestCase::class)->in(__DIR__);

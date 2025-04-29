@@ -1,6 +1,6 @@
 <?php
 
-namespace Casimirorocha\Laraglide;
+namespace Modularavel\Laraglide;
 
 use Illuminate\Support\Facades\Storage;
 use League\Glide\Urls\UrlBuilderFactory;

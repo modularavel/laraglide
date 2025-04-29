@@ -2,8 +2,8 @@
 
 namespace Modularavel\Laraglide\Tests;
 
-use Modularavel\Laraglide\LaraglideServiceProvider;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Modularavel\Laraglide\LaraglideServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra

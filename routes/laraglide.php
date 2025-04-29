@@ -1,8 +1,8 @@
 <?php
 
-use Modularavel\Laraglide\Laraglide;
 use Illuminate\Support\Facades\Route;
 use League\Glide\Urls\UrlBuilderFactory;
+use Modularavel\Laraglide\Laraglide;
 
 Route::get('/img/{path}', Laraglide::class)->where('path', '.*');
 
